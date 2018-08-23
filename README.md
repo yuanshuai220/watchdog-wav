@@ -7,6 +7,7 @@ Code for using watchdog python package to monitor the file system and adding wav
 
 # Datebase Structure
 Table Name: annotator_audio
+
 | Field | Attributes |
 | ------ | ------ |
 | Audio_id | AutoField(primary_key=True) |
