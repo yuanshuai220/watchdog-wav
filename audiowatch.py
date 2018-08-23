@@ -47,12 +47,9 @@ class FileEventHandler(FileSystemEventHandler):
 					Audio_create_time = creat_time
 					Audio_length = str(time) + "s"
 					Audio_address = address
-					cursor.execute("insert into annotator_audio \ 
-						(Audio_creat_time, Audio_address, Audio_name, \ 
-						Audio_des, Audio_length, Audio_size, Audio_format) \ 
-						values ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % 
-						(Audio_create_time, Audio_address, Audio_name, '', 
-							Audio_length, Audio_size, Audio_format))
+					cursor.execute("insert into annotator_audio (Audio_creat_time, Audio_address, Audio_name, \ 
+						Audio_des, Audio_length, Audio_size, Audio_format) values ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % 
+						(Audio_create_time, Audio_address, Audio_name, '', Audio_length, Audio_size, Audio_format))
 
 		cursor.close()
 		conn.commit()
